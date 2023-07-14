@@ -1,8 +1,10 @@
 const progressBar = document.querySelector('#timeLeftProgress');
 const timer = document.querySelector('#timer');
+const start = document.querySelector('#start');
 
 
-var timerLength = 25;
+var studyTimeLength = 25;
+var restTimeLength = 5;
 
 
 function startTimer(secondsLength, timerDiv){
@@ -13,6 +15,7 @@ function startTimer(secondsLength, timerDiv){
 
         minutes = minutes < 10 ? '0' + minutes : minutes;
         seconds = seconds < 10 ? '0' + seconds : seconds;
+
         progressBar.value++;
         timerDiv.innerHTML = `${minutes}:${seconds}`;
         console.log(minutes + ' ' + seconds)
@@ -23,7 +26,8 @@ function startTimer(secondsLength, timerDiv){
     }, 1000);
 }
 
+start.addEventListener('click', e => {
+    startTimer(studyTimeLength, timer);
+});
 
 
-
-startTimer(timerLength, timer);
