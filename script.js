@@ -1,6 +1,6 @@
 const progressBar = document.querySelector('#timeLeftProgress');
 const timer = document.querySelector('#timer');
-const start = document.querySelector('#start');
+const start = document.querySelector('#startPause');
 
 
 var studyTimeLength = 25;
