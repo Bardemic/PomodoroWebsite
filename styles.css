@@ -16,20 +16,28 @@ body {
     background-color: #1a1919;
 }
 
-#startPause {
-    display: none;
+#startButton, #pauseButton {
+    margin: 20px;
+    width: 250px;
+    padding: 30px;
+    font-size: 30px;
+    border: none;
 }
 
-#startPause:checked + #startPauseLabel::after {
-    width: 100px;
-    height: 30px;
-    background-color: #6dd530;
-    content: 'test 2';
+#startButton {
+    background-color: #26d526;
 }
 
-#startPauseLabel::after {
-    content: 'test';
+#startButton:hover {
+    background-color: #1fb01f;
+}
 
+#pauseButton {
+    background-color: #ff0000;
+}
+
+#pauseButton:hover {
+    background-color: #c00000;
 }
 
 #timerContainer {
