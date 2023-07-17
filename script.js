@@ -4,9 +4,10 @@ const pause = document.querySelector('#pauseButton');
 const svgCircle = document.querySelector('circle');
 
 var isStudyTime = true; //false when it is rest time
-var studyTimeLength = 25;
-var restTimeLength = 5;
+var studyTimeLength = 5;
+var restTimeLength = 2;
 var savedStudyTimeLength = studyTimeLength;
+var savedRestTimeLength = restTimeLength;
 var offset = 450.00;
 
 function startTimer(secondsLength, timerDiv, circleOffset){
@@ -33,13 +34,20 @@ function startTimer(secondsLength, timerDiv, circleOffset){
         secondsLength -= .01;
 
         if(secondsLength < 0) {
+            isStudyTime = !isStudyTime;
+            savedStudyTimeLength = studyTimeLength;
             clearInterval(timer);
         }
     }, 10);
 }
 
 start.addEventListener('click', e => {
-    startTimer(savedStudyTimeLength, timer, offset);
+    if(isStudyTime) {
+        startTimer(savedStudyTimeLength, timer, offset);
+    }
+    else {
+        startTimer(savedRestTimeLength, timer, offset);
+    }
 });
 
 
