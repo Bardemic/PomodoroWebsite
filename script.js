@@ -1,7 +1,12 @@
 const timer = document.querySelector('#timer');
+const studyButton = document.querySelector('#studyButton');
+const resetButton = document.querySelector('#resetButton');
 const start = document.querySelector('#startButton');
 const pause = document.querySelector('#pauseButton');
 const svgCircle = document.querySelector('circle');
+
+
+document.body.classList.add("study-theme");
 
 var isStudyTime = true; //false when it is rest time
 var studyTimeLength = 5;
@@ -56,8 +61,18 @@ start.addEventListener('click', e => {
 });
 
 function notActive(){
-    isStudyTime = !isStudyTime;
+    swapModes();
     savedStudyTimeLength = studyTimeLength;
     savedRestTimeLength = restTimeLength;
+}
+
+function swapModes() { //run this function when swapping from study to break or break to study time
+    if(isStudyTime){ //is true when trying to go from study time to rest time, will set to false after running code
+    }
+    else {
+    }
+    document.body.classList.toggle("rest-theme");
+    document.body.classList.toggle("study-theme");
+    isStudyTime = !isStudyTime;
 }
 

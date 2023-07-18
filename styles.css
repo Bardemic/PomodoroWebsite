@@ -1,6 +1,15 @@
 * {
     color: #dfdbdb;
-    box-sizing: border-box;
+}
+
+.study-theme {
+    --mainBackground: #501537;
+    --containerBackground: #922D50;
+}
+
+.rest-theme {
+    --mainBackground: #253D5B;
+    --containerBackground: #67697C;
 }
 
 h1 {
@@ -13,15 +22,26 @@ body {
     align-items: center;
     flex-direction: column;
     margin: 0;
-    background-color: #1a1919;
+    background-color: var(--mainBackground);
+}
+
+#studyButton, #restButton {
+    flex: 1;
+    height: auto;
+    border: none;
+    font-size: 30px;
+    padding: 10px;
+}
+
+#studyButton, #restButton {
+    background-color: #002aff;
 }
 
 #startButton, #pauseButton {
-    margin: 20px;
-    width: 250px;
     padding: 30px;
     font-size: 30px;
     border: none;
+    flex: 2;
 }
 
 #startButton {
@@ -43,10 +63,11 @@ body {
 }
 
 #timerContainer {
+    padding: 30px;
     width: 500px;
     height: 300px;
-    background-color: #333131;
-    gap: 5px;
+    background-color: var(--containerBackground);
+    gap: 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -64,6 +85,10 @@ body {
     width: 160px;
     height: 160px;
     position: relative;
+}
+
+#progressCircle>*{
+    box-sizing: border-box;
 }
 
 #outer {
@@ -98,4 +123,9 @@ svg {
     position: absolute;
     top: 0;
     left: 0;
+}
+
+#buttons {
+    width: 80%;
+    display: flex;
 }
