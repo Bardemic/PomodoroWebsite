@@ -25,6 +25,7 @@ body {
 }
 
 #startButton {
+    display: block;
     background-color: #26d526;
 }
 
@@ -33,6 +34,7 @@ body {
 }
 
 #pauseButton {
+    display: none;
     background-color: #ff0000;
 }
 

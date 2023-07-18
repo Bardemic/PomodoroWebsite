@@ -14,6 +14,8 @@ function startTimer(secondsLength, timerDiv, circleOffset){
     //circleOffset = 450.00; //450.00 Default
     let circleInterval = circleOffset/secondsLength/100;
     pause.addEventListener('click', e => {
+        start.style.display = 'block';
+        pause.style.display = 'none';
         savedStudyTimeLength = secondsLength;
         offset = circleOffset;
         console.log(offset);
@@ -34,14 +36,17 @@ function startTimer(secondsLength, timerDiv, circleOffset){
         secondsLength -= .01;
 
         if(secondsLength < 0) {
-            isStudyTime = !isStudyTime;
-            savedStudyTimeLength = studyTimeLength;
+            start.style.display = 'block';
+            pause.style.display = 'none';
+            notActive();
             clearInterval(timer);
         }
     }, 10);
 }
 
 start.addEventListener('click', e => {
+    start.style.display = 'none';
+    pause.style.display = 'block';
     if(isStudyTime) {
         startTimer(savedStudyTimeLength, timer, offset);
     }
@@ -50,4 +55,9 @@ start.addEventListener('click', e => {
     }
 });
 
+function notActive(){
+    isStudyTime = !isStudyTime;
+    savedStudyTimeLength = studyTimeLength;
+    savedRestTimeLength = restTimeLength;
+}
 
