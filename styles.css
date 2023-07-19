@@ -1,4 +1,8 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500&display=swap');
+
 * {
+    font-family: 'Chakra Petch';
     color: #dfdbdb;
 }
 
@@ -69,6 +73,8 @@ body {
     flex: 2;
 }
 
+
+
 #startButton {
     display: block;
     background-color: #26d526;
@@ -118,19 +124,11 @@ body {
     box-sizing: border-box;
 }
 
-#outer {
+
+#circleTextContainer {
     width: 160px;
     height: 160px;
-    padding: 20px;
     border-radius: 50%;
-    border: 1px solid white;
-}
-
-#inner {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    border: 1px solid white;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -138,11 +136,16 @@ body {
 
 circle {
     fill: none;
-    stroke: url(#gradientColor);
+    stroke: url(#gradientColorTop);
     stroke-width: 20px;
     stroke-dasharray: 450;
     stroke-dashoffset: 450;
     animation: anim 2s linear forwards;
+}
+
+#circleBottom {
+    stroke: url(#gradientColorBottom);
+    stroke-dashoffset: 0;
 }
 
 

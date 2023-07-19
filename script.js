@@ -3,7 +3,7 @@ const studyButton = document.querySelector('#studyButton');
 const restButton = document.querySelector('#restButton');
 const start = document.querySelector('#startButton');
 const pause = document.querySelector('#pauseButton');
-const svgCircle = document.querySelector('circle');
+const svgCircle = document.querySelector('#circleTop');
 
 
 document.body.classList.add("study-theme");

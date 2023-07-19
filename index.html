@@ -11,19 +11,23 @@
     <h1>Pomodoro Clock</h1>
     <div id="timerContainer">
         <div id="progressCircle">
-            <div id="outer">
-                <div id="inner">
+            <div id="circleTextContainer">
                     <div id="timer">00:25</div>
-                </div>
             </div>
             <svg xmlns="https://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
                 <defs>
-                    <linearGradient id="gradientColor">
+                    <linearGradient id="gradientColorTop">
                         <stop offset="0%" stop-color="#DA22FF"  />
                         <stop offset="100%" stop-color="#9733EE"  />
                     </linearGradient>
+                    <linearGradient id="gradientColorBottom">
+                        <stop offset="0%" stop-color="#d5ebe6"  />
+                        <stop offset="100%" stop-color="#f0f5f4"  />
+                    </linearGradient>
                 </defs>
-                <circle cx="80" cy="80" r="70" stroke-linecap="round"  />
+                
+                <circle id="circleBottom" cx="80" cy="80" r="70" stroke-linecap="round"  />
+                <circle id="circleTop" cx="80" cy="80" r="70" stroke-linecap="round"  />
             </svg>
         </div>
         <div id="buttons">
