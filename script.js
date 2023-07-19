@@ -11,8 +11,8 @@ document.body.classList.add("study-theme");
 var timerOn = false;
 var isStudyTime = true; //false when it is rest time
 var clockInProgress = false;
-var studyTimeLength = 4;
-var restTimeLength = 2;
+var studyTimeLength = 60*25;
+var restTimeLength = 60*5;
 var savedStudyTimeLength = studyTimeLength;
 var savedRestTimeLength = restTimeLength;
 var circleOffset = 450.00;
@@ -75,6 +75,7 @@ start.addEventListener('click', e => {
 
 function resetClock(){
     circleOffset=450;
+    svgCircle.style.strokeDashoffset = 450;
     start.style.display = 'block';
     pause.style.display = 'none';
     savedStudyTimeLength = studyTimeLength;
