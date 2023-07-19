@@ -11,7 +11,7 @@ document.body.classList.add("study-theme");
 var timerOn = false;
 var isStudyTime = true; //false when it is rest time
 var clockInProgress = false;
-var studyTimeLength = 5;
+var studyTimeLength = 4;
 var restTimeLength = 2;
 var savedStudyTimeLength = studyTimeLength;
 var savedRestTimeLength = restTimeLength;
@@ -21,6 +21,7 @@ var endInterval = false;
 
 function startTimer(secondsLength, timerDiv){
     clockInProgress = true;
+    endInterval = false;
     //circleOffset = 450.00; //450.00 Default
     circleInterval = circleOffset/secondsLength/100;
     let timer = setInterval(function(){
