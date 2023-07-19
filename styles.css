@@ -5,11 +5,23 @@
 .study-theme {
     --mainBackground: #501537;
     --containerBackground: #922D50;
+    --studyBackground: #491729;
+    --restBackground: #969696;
+    --studyButtonMargin: 5px;
+    --studyButtonBorder: 5px red solid;
+    --restButtonMargin: 0px;
+    --restButtonBorder: none;
 }
 
 .rest-theme {
     --mainBackground: #253D5B;
     --containerBackground: #67697C;
+    --studyBackground: #969696;
+    --restBackground: #253D5B;
+    --studyButtonMargin: 0px;
+    --studyButtonBorder: none;
+    --restButtonMargin: 5px;
+    --restButtonBorder: 5px red solid;;
 }
 
 h1 {
@@ -34,10 +46,23 @@ body {
 }
 
 #studyButton, #restButton {
-    background-color: #002aff;
+    background-color: #969696;
+}
+
+#studyButton {
+    border-bottom: var(--studyButtonBorder);
+    margin-top: var(--studyButtonMargin);
+    background-color: var(--studyBackground);
+}
+
+#restButton {
+    border-bottom: var(--restButtonBorder);
+    margin-top: var(--restButtonMargin);
+    background-color: var(--restBackground);
 }
 
 #startButton, #pauseButton {
+    height: 95px;
     padding: 30px;
     font-size: 30px;
     border: none;
@@ -54,6 +79,8 @@ body {
 }
 
 #pauseButton {
+    border-bottom: 5px white solid;
+    margin-top: 5px;
     display: none;
     background-color: #ff0000;
 }
